@@ -1,4 +1,6 @@
 from accelerate import Accelerator
+import random
+
 accelerator=Accelerator(mixed_precision="fp16")
 
 def train(
