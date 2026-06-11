@@ -1,4 +1,6 @@
 from accelerate import Accelerator
+from torchmetrics.image.fid import FrechetInceptionDistance
+
 accelerator=Accelerator(mixed_precision="fp16")
 
 fid=FrechetInceptionDistance(
