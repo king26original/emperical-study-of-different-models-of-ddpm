@@ -1,4 +1,7 @@
-fid = FrechetInceptionDistance(
+from accelerate import Accelerator
+accelerator=Accelerator(mixed_precision="fp16")
+
+fid=FrechetInceptionDistance(
     feature=2048,
     normalize=True
 ).to(accelerator.device)
