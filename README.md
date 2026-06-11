@@ -96,9 +96,10 @@ This suggests that increased attention complexity may not provide significant ga
 <img width="1111" height="120" alt="image" src="https://github.com/user-attachments/assets/467e3fce-0ad2-4824-9573-08d4f038837f" />
 
 ### Model 3: Cosine + EMA + Single-head
-
-
-
+<img width="1112" height="120" alt="image" src="https://github.com/user-attachments/assets/d810551d-2b9b-4172-bdb2-e984acc19237" />
+<img width="1112" height="121" alt="image" src="https://github.com/user-attachments/assets/3abe7483-888f-4f64-80d6-c6b4421a7aa5" />
+<img width="1109" height="118" alt="image" src="https://github.com/user-attachments/assets/12839280-6c36-47c6-b63a-298e156cdfdf" />
+<img width="1111" height="120" alt="image" src="https://github.com/user-attachments/assets/3f2bfd13-450e-4381-9d50-4f365f2ba7b8" />
 
 ### Model 4: Cosine + EMA + Multi-head
 
