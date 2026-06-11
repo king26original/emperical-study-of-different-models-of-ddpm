@@ -10,9 +10,10 @@ transform=transforms.Compose([
     )
 ])
 
-"""assuming the user already has downloaded the dataset in nested directory format"""
-trainset=torchvision.datasets.ImageFolder(
-    root='/kaggle/input/datasets/oxcdcd/cifar10/cifar10/train',
+trainset=torchvision.datasets.CIFAR10(
+    root='./data',
+    train=True,
+    download=True,
     transform=transform
 )
 
