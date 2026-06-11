@@ -1,3 +1,5 @@
+import math
+
 timesteps=1000
 
 s=0.008
