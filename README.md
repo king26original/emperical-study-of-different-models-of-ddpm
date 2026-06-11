@@ -86,6 +86,7 @@ This suggests that increased attention complexity may not provide significant ga
 
 ## Generated Samples
 ### Model 1: Linear + Single-head
+<img width="1617" height="176" alt="image" src="https://github.com/user-attachments/assets/11fb3b1c-2765-4f65-956c-a7c7962e47c4" />
 
 
 
