@@ -50,4 +50,4 @@ losses4=train(
     ddpm_model_name=False,
     ema_model_name='ema_model4.pth',
     ema_model=ema_model4
-):
+)
