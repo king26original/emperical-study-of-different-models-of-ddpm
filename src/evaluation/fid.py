@@ -26,7 +26,7 @@ for images, _ in trainloader:
     if real_count>=target_images:
         break
 
-def fid_fn(ema_model, base_fid, cosine_alpha=cosine_alpha, cosine_alpha_bar=cosine_alpha_bar, cosine_posterior_variance=cosine_posterior_variance, target_images=5000):
+def fid_fn(ema_model, base_fid, alpha, alpha_bar, posterior_variance, target_images=5000):
     fake_count=0
     batch_size=64
     
@@ -39,9 +39,9 @@ def fid_fn(ema_model, base_fid, cosine_alpha=cosine_alpha, cosine_alpha_bar=cosi
     
         fake_images=sample_batch(
             ema_model,
-            cosine_alpha,
-            cosine_alpha_bar,
-            cosine_posterior_variance,
+            alpha,
+            alpha_bar,
+            posterior_variance,
             batch_size=batch_size
         )
     
