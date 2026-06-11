@@ -1,3 +1,6 @@
+import torch
+from torch import nn
+
 class model_multi(nn.Module):
   def __init__(
       self, 
