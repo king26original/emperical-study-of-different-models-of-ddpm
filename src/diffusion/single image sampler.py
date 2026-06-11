@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def sample_model(ddpm, alpha, alpha_bar, posterior_variance, ema_model=False):
     if ema_model is False:
         ema_model=ddpm
