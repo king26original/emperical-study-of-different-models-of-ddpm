@@ -13,10 +13,10 @@ from src.data.dataloader import trainloader
 from src.diffusion.linear_beta_schedule import linear_alpha_bar
 
 losses1=train(
-    model1,
-    trainloader,
+    model=model1,
+    trainloader=trainloader,
     alpha_bar=linear_alpha_bar,
-    'model1.pth',
+    ddpm_model_name='model1.pth',
     ema_model_name=False,
     ema_model=False
 )
@@ -24,8 +24,8 @@ losses1=train(
 losses2=train(
     model2,
     trainloader,
-    alpha_bar=linear_alpha_bar,
-    'model2.pth',
+    alpha_bar=cosine_alpha_bar,
+    ddpm_model_name='model2.pth',
     ema_model_name=False,
     ema_model=False
 )
