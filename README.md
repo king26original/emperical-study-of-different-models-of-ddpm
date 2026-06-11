@@ -13,6 +13,89 @@ The experiments analyze the impact of:
 
 ---
 
+## Introduction to Denoising Diffusion Probabilistic Models (DDPMs)
+
+Denoising Diffusion Probabilistic Models (DDPMs) are a class of generative models that learn to synthesize realistic data by gradually reversing a noise corruption process. Unlike Generative Adversarial Networks (GANs), which generate samples in a single forward pass, DDPMs generate data through a sequence of iterative denoising steps.
+
+The central idea behind DDPMs is surprisingly simple:
+
+1. **Forward Diffusion Process:**
+   Starting from a real image, small amounts of Gaussian noise are progressively added over many timesteps until the image becomes indistinguishable from pure noise.
+
+2. **Reverse Denoising Process:**
+   A neural network is trained to predict and remove the noise added at each timestep. Once trained, the model can start from random Gaussian noise and iteratively denoise it to generate new samples.
+
+### Forward Process
+
+The forward diffusion process transforms a clean image (x_0) into increasingly noisy versions (x_t):
+
+[
+q(x_t \mid x_{t-1}) = \mathcal{N}\left(
+\sqrt{1-\beta_t},x_{t-1},
+\beta_t I
+\right)
+]
+
+where:
+
+* (x_0) is the original image,
+* (x_t) is the noisy image at timestep (t),
+* (\beta_t) controls the amount of noise added at each step.
+
+After a sufficiently large number of timesteps, the data distribution approaches a standard Gaussian distribution.
+
+### Reverse Process
+
+The reverse process attempts to undo the corruption introduced by the forward process:
+
+[
+p_\theta(x_{t-1}\mid x_t)
+]
+
+A neural network parameterized by (\theta) is trained to estimate the noise present in (x_t). By repeatedly applying this learned denoising process, the model gradually reconstructs a clean image from random noise.
+
+### Training Objective
+
+Instead of directly predicting the clean image, DDPMs are commonly trained to predict the noise that was added:
+
+[
+L_{\text{simple}}
+=================
+
+\mathbb{E}
+\left[
+\left|
+\epsilon
+--------
+
+\epsilon_\theta(x_t,t)
+\right|^2
+\right]
+]
+
+where:
+
+* (\epsilon) is the true Gaussian noise,
+* (\epsilon_\theta(x_t,t)) is the predicted noise,
+* the objective minimizes the mean squared error between the two.
+
+### Why DDPMs?
+
+Diffusion models have gained significant attention because they offer several advantages:
+
+* Stable training compared to adversarial approaches.
+* High-quality and diverse sample generation.
+* A principled probabilistic formulation.
+* Flexibility to incorporate architectural and sampling improvements.
+
+However, their iterative generation process can be computationally expensive, making design choices such as noise schedules, Exponential Moving Average (EMA), and attention mechanisms particularly important in practice.
+
+### Focus of This Study
+
+Rather than proposing a new diffusion architecture, this work investigates the practical impact of several widely used DDPM design choices. Specifically, we examine how different noise schedules, EMA, and attention mechanisms influence generation quality on CIFAR-10 under limited computational resources.
+
+---
+
 ## Experimental Setup
 
 * **Dataset:** CIFAR-10
