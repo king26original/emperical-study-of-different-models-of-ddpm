@@ -59,6 +59,51 @@ This suggests that increased attention complexity may not provide significant ga
 
 ---
 
+## Training Dynamics
+
+### Model 1: Linear + Single-head
+### Loss Curve
+
+
+
+
+### Model 2: Cosine + Single-head
+### Loss Curve
+
+
+
+
+### Model 3: Cosine + EMA + Single-head
+### Loss Curve
+
+
+
+
+### Model 4: Cosine + EMA + Multi-head
+### Loss Curve
+
+---
+
+## Generated Samples
+### Model 1: Linear + Single-head
+
+
+
+
+### Model 2: Cosine + Single-head
+
+
+
+
+### Model 3: Cosine + EMA + Single-head
+
+
+
+
+### Model 4: Cosine + EMA + Multi-head
+
+---
+
 ## Repository Structure
 
 ```text
@@ -147,3 +192,9 @@ Potential extensions include:
 ## Acknowledgements
 
 This project was inspired by the original DDPM and Improved DDPM papers and was implemented using PyTorch and Hugging Face Accelerate.
+
+---
+
+## Takeaways
+
+Under constrained compute, noise schedules and EMA mattered far more than increasing attention complexity. This project demonstrates how systematic experimentation can reveal which diffusion model components provide the greatest practical benefit.
