@@ -6,11 +6,13 @@ model2=model()
 model3=model()
 model4=model_multi()
 
+import copy
 ema_model3=copy.deepcopy(model3)
 ema_model4=copy.deepcopy(model4)
 
 from src.data.dataloader import trainloader
 from src.diffusion.linear_beta_schedule import linear_alpha_bar
+from src.training.train import train
 
 losses1=train(
     model=model1,
