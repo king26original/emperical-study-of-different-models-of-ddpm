@@ -63,24 +63,28 @@ This suggests that increased attention complexity may not provide significant ga
 
 ### Model 1: Linear + Single-head
 ### Loss Curve
+<img width="1000" height="500" alt="1" src="https://github.com/user-attachments/assets/2f2e8e5b-e8d1-4310-942d-c0480b3e2d5b" />
 
 
 
 
 ### Model 2: Cosine + Single-head
 ### Loss Curve
+<img width="1000" height="500" alt="2" src="https://github.com/user-attachments/assets/8feca5c8-9da9-41a6-8354-9949d13fa3ea" />
 
 
 
 
 ### Model 3: Cosine + EMA + Single-head
 ### Loss Curve
+<img width="1000" height="500" alt="3" src="https://github.com/user-attachments/assets/91f202fc-a9e0-43ed-92ec-c1667b3e135f" />
 
 
 
 
 ### Model 4: Cosine + EMA + Multi-head
 ### Loss Curve
+<img width="1000" height="500" alt="4" src="https://github.com/user-attachments/assets/8da4d5a7-f4ed-4517-9ccd-514b0f19ec2a" />
 
 ---
 
