@@ -66,10 +66,6 @@ ddpm-ablation-study/
 │
 ├── src/                 # Reusable components
 ├── scripts/             # Training and evaluation entry points
-├── notebooks/           # Experimental notebook
-├── assets/              # Generated samples and figures
-├── results/             # Experimental summaries
-├── checkpoints/         # Model checkpoints (optional)
 ├── requirements.txt
 └── README.md
 ```
