@@ -1,3 +1,6 @@
+from accelerate import Accelerator
+accelerator=Accelerator(mixed_precision="fp16")
+
 def train(
     ddpm,
     trainloader,
