@@ -1,3 +1,6 @@
+import torch
+from torch import nn
+
 class model(nn.Module):
   def __init__(
       self,
