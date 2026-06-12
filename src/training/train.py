@@ -2,6 +2,7 @@ from accelerate import Accelerator
 import random
 import torch
 from torch import nn
+from src.diffusion.ema import update_ema
 
 accelerator=Accelerator(mixed_precision="fp16")
 
