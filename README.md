@@ -192,23 +192,6 @@ python scripts.generate_samples.py
 
 ---
 
-## Generated Samples
-
-Sample generations from each model can be found in:
-
-```text
-assets/samples/
-```
-
-Example images:
-
-* Linear schedule baseline
-* Cosine schedule
-* Cosine + EMA (single-head)
-* Cosine + EMA (multi-head)
-
----
-
 ## Limitations
 
 * Experiments were conducted exclusively on CIFAR-10 (32 × 32 resolution).
