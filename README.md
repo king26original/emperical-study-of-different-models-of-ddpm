@@ -175,23 +175,19 @@ pip install -r requirements.txt
 Example:
 
 ```bash
-accelerate launch scripts/train_linear.py
-```
-
-```bash
-accelerate launch scripts/train_cosine.py
+accelerate launch scripts.train_models
 ```
 
 ### Evaluate FID
 
 ```bash
-accelerate launch scripts/evaluate_fid.py
+accelerate launch scripts.evaluate_fid.py
 ```
 
 ### Generate Samples
 
 ```bash
-python scripts/generate_samples.py
+python scripts.generate_samples.py
 ```
 
 ---
