@@ -1,7 +1,6 @@
 numpy
 torch
 torchvision
-copy
 accelerate
 random
 matplotlib
