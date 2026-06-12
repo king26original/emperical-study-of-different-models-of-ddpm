@@ -52,7 +52,7 @@ losses4=train(
     ema_model=ema_model4
 )
 
-torch.save(model1.state_dict(), 'model1.pth')
-torch.save(model2.state_dict(), 'model2.pth')
-torch.save(ema_model3.state_dict(), 'ema_model3.pth')
-torch.save(ema_model4.state_dict(), 'ema_model4.pth')
+torch.save(model1.state_dict(), 'checkpoints/model1.pth')
+torch.save(model2.state_dict(), 'checkpoints/model2.pth')
+torch.save(ema_model3.state_dict(), 'checkpoints/ema_model3.pth')
+torch.save(ema_model4.state_dict(), 'checkpoints/ema_model4.pth')
