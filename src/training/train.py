@@ -1,5 +1,7 @@
 from accelerate import Accelerator
 import random
+import torch
+from torch import nn
 
 accelerator=Accelerator(mixed_precision="fp16")
 
