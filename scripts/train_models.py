@@ -15,7 +15,7 @@ from src.diffusion.linear_beta_schedule import linear_alpha_bar
 from src.training.train import train
 
 losses1=train(
-    model=model1,
+    model1,
     trainloader=trainloader,
     alpha_bar=linear_alpha_bar,
     ddpm_model_name='model1.pth',
