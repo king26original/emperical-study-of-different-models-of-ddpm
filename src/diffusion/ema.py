@@ -1,4 +1,5 @@
 import copy
+import torch
 
 @torch.no_grad()
 def update_ema(ema_model, model, decay=0.995):
