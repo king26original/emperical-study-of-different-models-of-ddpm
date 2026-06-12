@@ -1,5 +1,6 @@
 from src.model.multi_head_attention import model_multi
 from src.model.single_head_attention import model
+import torch
 
 model1=model()
 model2=model()
