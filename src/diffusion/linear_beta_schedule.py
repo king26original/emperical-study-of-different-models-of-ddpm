@@ -1,3 +1,5 @@
+import torch
+
 timesteps = 1000
 
 linear_beta=torch.linspace(
