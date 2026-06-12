@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import torch
+from src.training.train import accelerator
 
 def sample_model(ddpm, alpha, alpha_bar, posterior_variance, ema_model=False):
     if ema_model is False:
