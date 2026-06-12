@@ -146,20 +146,6 @@ This suggests that increased attention complexity may not provide significant ga
 <img width="1108" height="119" alt="image" src="https://github.com/user-attachments/assets/afb2e1cc-9f2f-48e8-b9fa-30e19329b709" />
 <img width="1107" height="116" alt="image" src="https://github.com/user-attachments/assets/4bbaf10a-648e-46a0-b037-70593ca93cac" />
 
-
----
-
-## Repository Structure
-
-```text
-ddpm-ablation-study/
-│
-├── src/                 # Reusable components
-├── scripts/             # Training and evaluation entry points
-├── requirements.txt
-└── README.md
-```
-
 ---
 
 ## Usage
@@ -168,6 +154,24 @@ ddpm-ablation-study/
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Install pre-trained models
+
+```bash
+kaggle models download -m king26asli/cifar10cosinenoemasinglehead
+```
+
+```bash
+kaggle models download -m king26asli/cifar10cosineno-emasingle-head-500epochs
+```
+
+```bash
+kaggle models download -m king26asli/cifar10multiheademacosine
+```
+
+```bash
+kaggle models download -m king26asli/cifar10-cosine-ema-single-head
 ```
 
 ### Train Models
@@ -182,12 +186,6 @@ accelerate launch scripts.train_models
 
 ```bash
 accelerate launch scripts.evaluate_fid.py
-```
-
-### Generate Samples
-
-```bash
-python scripts.generate_samples.py
 ```
 
 ---
@@ -206,9 +204,7 @@ python scripts.generate_samples.py
 Potential extensions include:
 
 * Scaling to higher-resolution datasets
-* Exploring classifier-free guidance
 * Investigating DDIM sampling
-* Evaluating larger attention architectures
 * Performing FID evaluation with larger sample counts
 
 ---
