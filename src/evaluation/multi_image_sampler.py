@@ -1,4 +1,5 @@
 import torch
+from src.evaluation.fid import accelerator
 
 def sample_batch(
     ema_model,
